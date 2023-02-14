@@ -19,12 +19,13 @@ public class Vendor
 
     /**
      * Constructs a Vendor
-     * @param price the price of a single item in cents (int)
-     * @param stock number of items to place in stock (int)
+     * @param p the price of a single item in cents (int)
+     * @param s number of items to place in stock (int)
      */
-    public Vendor(int price, int stock)
+    public Vendor(int p, int s)
     {
-        //You need to complete this using this. notation
+        price = p;
+        stock = s;
     }
 
     /**
@@ -33,9 +34,9 @@ public class Vendor
      */
 
 
-    public void setStock(int stock)
+    public void setStock(int s)
     {
-        //You need to complete this using this. notation
+        stock = s;
     }
 
     /**
@@ -44,7 +45,7 @@ public class Vendor
      */
     public int getStock()
     {
-        //complete this
+        return stock;
     }
 
     /**
@@ -55,6 +56,7 @@ public class Vendor
     public void addMoney(int d)
     {
         //You need to complete this using mutator
+        deposit += d;
     }
 
     /**
