@@ -15,6 +15,7 @@ public class Vendor
     private int deposit;
     private int change;
     //make a private static double variable called totalSales that has an initial value of 0
+    private static double totalSales = 0;
 
 
     /**
@@ -56,7 +57,7 @@ public class Vendor
     public void addMoney(int d)
     {
         //You need to complete this using mutator
-        deposit += d;
+        change += d;
     }
 
     /**
@@ -80,6 +81,16 @@ public class Vendor
     public boolean makeSale()
     {
         //create the makesale method
+        if(stock >= 1 && deposit >= price){
+            stock--;
+            deposit -= price;
+            change = deposit;
+            return true;
+        }else{
+            change = deposit;
+            deposit = deposit - deposit;
+            return false;
+        }
     }
 
     /**
@@ -90,7 +101,6 @@ public class Vendor
     public int getChange()
     {
         int c=change;
-        change=0;
         return c;
     }
 
